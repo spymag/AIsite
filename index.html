@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet and Mobile Phone Usage Trends</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Global Internet and Mobile Trends</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Internet and Mobile Phone Usage Trends</h1>
-        <canvas id="usageChart"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <header>
+        <h1>Global Internet and Mobile Phone Usage Trends</h1>
+    </header>
+    <main>
+        <section id="internet-trends">
+            <h2>Global Internet Users</h2>
+            <canvas id="internetChart"></canvas>
+        </section>
+        <section id="mobile-trends">
+            <h2>Global Smartphone Users</h2>
+            <canvas id="mobileChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Global Trends Tracker</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
