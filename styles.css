@@ -1,11 +1,16 @@
+/* --- General Body Styles --- */
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* --- Header Styles --- */
 header {
     background-color: #333;
     color: white;
@@ -13,10 +18,13 @@ header {
     text-align: center;
 }
 
+/* --- Main Content Styles --- */
 main {
     padding: 20px;
+    flex-grow: 1; /* Ensures main content takes up available space, pushing footer down */
 }
 
+/* --- Chart Section Styles --- */
 section {
     background-color: white;
     padding: 20px;
@@ -25,22 +33,22 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+h2 { /* Styling for headings within sections */
     color: #333;
     margin-top: 0;
 }
 
+/* --- Canvas (Chart) Styles --- */
 canvas {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensures charts are responsive and don't overflow their container */
+    height: auto;    /* Maintains aspect ratio */
 }
 
+/* --- Footer Styles --- */
 footer {
     text-align: center;
     padding: 1em 0;
     background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    /* Removed position: fixed, bottom: 0, and width: 100% for sticky footer */
 }
