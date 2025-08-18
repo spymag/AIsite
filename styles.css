@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* --- General Body Styles --- */
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #EAEAEA; /* Light text */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,43 +14,58 @@ body {
 
 /* --- Header Styles --- */
 header {
-    background-color: #333;
+    background: linear-gradient(90deg, #3a3a3a, #1a1a1a); /* Dark gradient */
     color: white;
-    padding: 1em 0;
+    padding: 1.5em 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Main Content Styles --- */
 main {
-    padding: 20px;
-    flex-grow: 1; /* Ensures main content takes up available space, pushing footer down */
+    padding: 40px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* --- Chart Section Styles --- */
 section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1E1E1E; /* Dark card background */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 { /* Styling for headings within sections */
-    color: #333;
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    color: #FFFFFF;
     margin-top: 0;
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* --- Canvas (Chart) Styles --- */
 canvas {
-    max-width: 100%; /* Ensures charts are responsive and don't overflow their container */
-    height: auto;    /* Maintains aspect ratio */
+    max-width: 100%;
+    height: auto;
 }
 
 /* --- Footer Styles --- */
 footer {
     text-align: center;
-    padding: 1em 0;
-    background-color: #333;
+    padding: 1.5em 0;
+    background: linear-gradient(90deg, #1a1a1a, #3a3a3a); /* Dark gradient */
     color: white;
-    /* Removed position: fixed, bottom: 0, and width: 100% for sticky footer */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
